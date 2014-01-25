@@ -1,7 +1,7 @@
 var async = require('async');
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('10.0.1.57/bm');
+var db = monk('192.168.0.34/bm');
 var collection = db.get('testcollection');
 var insertTimes = [];
 var levelOfConcurrency = 1;
@@ -58,7 +58,7 @@ var aThousanddInserts = function(concurrency, callback) {
 
 	collection.index('index', function() {});
 
-	for(var i = 0; i < 6000; i++) {
+	for(var i = 0; i < 10000; i++) {
 		q.push({index: i}, queueCallback);
 	}
 };

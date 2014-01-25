@@ -2,7 +2,7 @@ var testInserts = require('./testInserts');
 var testFind = require('./testFind');
 var async = require('async');
 
-var concurrencySteps = [1,2,4,6,8,10];
+var concurrencySteps = [1000,2000,4000,6000,8000,10000];
 
 var queueCallback = function (err) {
 	if (err) {
